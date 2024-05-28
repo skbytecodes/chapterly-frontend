@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#cust_rate{
+  font-size: .9em;
+}
+
+.rat_bar{
+  font-size: .2em;
+}
+
+#star_icon{
+  font-size: 1.2em;
+}
+

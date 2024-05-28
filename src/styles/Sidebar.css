@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sidebar{
+    /* height: 100vh; */
+    height: fit-content;
+}
+
+.side_head{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+}
+
+.account_sec{
+    background-color: #3e5962;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.7em 0 1.7em;
+    color: white;
+}
+
+.acc_prof{
+    display: flex;  
+    height: 7vh;
+    align-items: center;
+}
+
+.acc_prof > p{
+    margin-left: 1em;
+}
+
+.cat{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8em 1.7em 0.8em 1.7em;
+    border-bottom: 1px solid gray;
+}
+.side_footer{
+    background-color: #3e5962;
+    color: white;
+    overflow-y: scroll;
+}
+.side_foot_div{
+    display: flex;
+    padding: 0.8em 1.2em 0.8em 1.2em;
+}
+.side_foot_div > p{
+    margin-left: 0.5em;
+}

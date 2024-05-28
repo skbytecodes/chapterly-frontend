@@ -1,0 +1,29 @@
+/* ErrorPage.css */
+
+/* Error container */
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Error content */
+  .error-content {
+    max-width: 600px;
+  }
+  
+  /* Error links */
+  .error-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .error-links a {
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  

@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.review_desc {
+  font-family: Lato, sans-serif;
+  line-height: 1.7 !important;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-align: justify;
+  color: #212529;
+}
+
+#review_rate_star{
+  font-size: 1.1em;
+}
