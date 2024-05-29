@@ -231,13 +231,14 @@ function Cart() {
             <div className="order_total_div flex justify-between">
               <p>Shipping (in India)</p>
               <p>
-                <b>&#8377; {parseFloat(100).toFixed(2)}</b>
+                {/* <b>&#8377; {parseFloat(100).toFixed(2)}</b> */}
+                <b>FREE</b>
               </p>
             </div>
             <div className="order_total_div flex justify-between">
               <p>Amount Payable</p>
               <p>
-                <b>&#8377; {parseFloat((cartTotal).toFixed(2)) + 100}</b>
+                <b>&#8377; {parseFloat((cartTotal).toFixed(2))}</b>
               </p>
             </div>
             <div className="cont_check_container   text-white h-10 md:flex md:justify-end">

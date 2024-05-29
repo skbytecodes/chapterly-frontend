@@ -8,10 +8,11 @@ import Footer1 from "../components/Footer1";
 import Overlay from "../components/Overlay";
 
 function AuthorDetails() {
+  const parentUrl = window.globalPrentUrl;
   const { author } = useParams();
   const { isLoading, data, isError, error } = useQuery("fetch-author", () => {
     return axios.get(
-      "http://localhost:8080/api/v1/authors/authorByName/" + author
+      parentUrl + "api/v1/authors/authorByName/" + author
     );
   });
 

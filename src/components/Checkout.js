@@ -15,6 +15,7 @@ import LoginPage from "./LoginPage";
 import Overlay from "./Overlay";
 
 function Checkout() {
+  const parentUrl = window.globalPrentUrl;
   const [showShippingForm, setShowShippingForm] = useState("block");
   const totalAmount = useSelector((state) => state.totalItemsAmount);
   const itemsToPurchase = useSelector((state) => state.cartItems.items);
@@ -201,7 +202,7 @@ function Checkout() {
       };
 
       const result = await axios.post(
-        "http://localhost:8080/api/v1/order/createOrder",
+        parentUrl+"api/v1/order/createOrder",
         data,
         { headers: headers }
       );
@@ -234,12 +235,12 @@ function Checkout() {
             razorpaySignature: response.razorpay_signature,
           };
           const result = await axios.post(
-            "http://localhost:8080/api/v1/payment/success",
+            parentUrl + "api/v1/payment/success",
             data,
             { headers: headers }
           );
           if (result.data == "SUCCESS") {
-            window.location.href = "/";
+            window.location.href = "/myorders";
           } else {
             window.location.href = "/error";
           }
@@ -460,7 +461,8 @@ function Checkout() {
                   </div>
                   <div className="flex justify-between items-center font-semibold">
                     <p>Delivery Fee</p>
-                    <p>&#8377; {parseFloat(0).toFixed(2)}</p>
+                    {/* <p>&#8377; {parseFloat(0).toFixed(2)}</p> */}
+                    <p>FREE</p>
                   </div>
                   <div
                     className="flex justify-between items-center"

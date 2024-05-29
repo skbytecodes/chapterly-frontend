@@ -6,6 +6,8 @@ import Header from "../components/Header";
 import Overlay from "../components/Overlay";
 
 function SearchedBooks() {
+  const parentUrl = window.globalPrentUrl;
+
   const { key } = useParams();
   const [books, setBooks] = useState([]);
   const [isLoading, setIsLoading] = useState();
@@ -15,7 +17,7 @@ function SearchedBooks() {
     const searchKey = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/api/v1/search/books/" + key
+          parentUrl + "api/v1/search/books/" + key
         );
         setBooks(response.data);
         setIsLoading(false)

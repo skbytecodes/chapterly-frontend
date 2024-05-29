@@ -10,9 +10,10 @@ import Header from "./Header";
 import Overlay from "./Overlay";
 
 function HomeContainer() {
+  const parentUrl = window.globalPrentUrl;
   const { isLoading, data, isError, error } = useQuery("fetch-categories", () => {
     return axios.get(
-      "http://localhost:8080/api/v1/categories"
+      parentUrl + "api/v1/categories"
     );
   });
 

@@ -7,6 +7,8 @@ import { login } from "../redux/actions";
 import { isTokenExpired } from "../utils/Utils.js";
 
 function MyOrders() {
+  const parentUrl = window.globalPrentUrl;
+
   const dispatch = useDispatch();
   const isLoggedIn = useSelector((state) => state.authentication.isLoggedIn);
   const accessToken = useSelector((state) => state.authentication.acessToken);
@@ -19,11 +21,12 @@ function MyOrders() {
     const fetchOrders = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/api/v1/order/userOrders",
+          parentUrl + "api/v1/order/userOrders",
           {
             headers: headers,
           }
         );
+        console.log("order resposne : ", response)
         setOrders(response.data);
       } catch (error) {
         const auth = {
@@ -70,7 +73,7 @@ function MyOrders() {
                         </span>
                       </p>
                       <p className="font-semibold text-base leading-7 text-black mt-4">
-                        Order Payment :{" "}
+                        Order Date :{" "}
                         <span className="text-gray-400 font-medium">
                           {" "}
                           {order.orderPaymentTimeStamp}
@@ -127,7 +130,7 @@ function MyOrders() {
                                   </p>
                                   <p className="lg:mt-4 font-medium text-sm leading-7 text-indigo-600">
                                     &#8377;
-                                    {parseFloat(parseFloat(orderItem.book_price).toFixed(2)) + 100}
+                                    {parseFloat(orderItem.book_price).toFixed(2)}
 
                                   </p>
                                 </div>
@@ -148,7 +151,7 @@ function MyOrders() {
                                     Expected Delivery Time
                                   </p>
                                   <p className="font-medium text-base whitespace-nowrap leading-7 lg:mt-3 text-emerald-500">
-                                    23rd March 2021
+                                    {order.deliveryTimeStamp}
                                   </p>
                                 </div>
                               </div>
@@ -180,14 +183,15 @@ function MyOrders() {
                       </button>
                       <p className="font-medium text-lg text-gray-900 pl-6 py-3 max-lg:text-center">
                         Paid using Credit Card{" "}
-                        <span className="text-gray-500">ending with 8822</span>
+                        <span className="text-gray-500">ending with {order.cardLastDigits}</span>
                       </p>
                     </div>
                     <p className="font-semibold text-lg text-black py-6">
                       Total Price:{" "}
                       <span className="text-indigo-600">
                         {" "}
-                        &#8377;{parseFloat(order.totalOrderAmount).toFixed(2)}
+                        {/* &#8377;{parseFloat(order.totalOrderAmount).toFixed(2)} */}
+                        &#8377; {parseFloat(order.totalOrderAmount).toFixed(2)}
                       </span>
                     </p>
                   </div>

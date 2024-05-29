@@ -9,6 +9,7 @@ import "../styles/Authentication.css";
 import NoNavHeader from "./NoNavHeader";
 
 function Authentication() {
+  const parentUrl = window.globalPrentUrl;
   const dispatch = useDispatch();
   const registerPage = useRef(null);
   const loginPage = useRef(null);
@@ -76,7 +77,7 @@ function Authentication() {
     if (validateEmail(email) && validatePassword(password)) {
       try {
         const response = await axios.post(
-          "http://localhost:8080/api/v1/authenticate",
+          parentUrl+"api/v1/authenticate",
           {
             email: email,
             password: password,
@@ -158,7 +159,7 @@ function Authentication() {
     ) {
       try {
         const response = await axios.post(
-          "http://localhost:8080/api/v1/register",
+          parentUrl+"api/v1/register",
           {
             firstname: firstname,
             lastname: lastname,

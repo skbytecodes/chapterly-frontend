@@ -9,6 +9,7 @@ import NoNavHeader from "./NoNavHeader";
 import Overlay from "./Overlay";
 
 function LoginPage() {
+  const parentUrl = window.globalPrentUrl;
   const dispatch = useDispatch();
   const loginPage = useRef(null);
   const loginEmailRef = useRef(null);
@@ -79,7 +80,7 @@ function LoginPage() {
     if (validateEmail(email) && validatePassword(password)) {
       try {
         const response = await axios.post(
-          "http://localhost:8080/api/v1/auth/authenticate",
+          parentUrl + "api/v1/auth/authenticate",
           {
             email: email,
             password: password,

@@ -4,10 +4,11 @@ import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 
 function FeaturedAuthors() {
+  const parentUrl = window.globalPrentUrl;
   const { isLoading, data, isError, error } = useQuery(
     "fetch-featured-authors",
     () => {
-      return axios.get("http://localhost:8080/api/v1/featuredAuthors/5");
+      return axios.get(parentUrl + "api/v1/featuredAuthors/5");
     }
   );
 

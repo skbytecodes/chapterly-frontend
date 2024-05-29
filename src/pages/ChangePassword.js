@@ -6,6 +6,8 @@ import axios from "axios";
 import LoginPage from "../components/LoginPage";
 
 function ChangePassword() {
+  const parentUrl = window.globalPrentUrl;
+
   const [oldPassword, setOldPasssword] = useState("");
   const [newPassword, setNewPasssword] = useState("");
   const [confirmPassword, setConfirmPasssword] = useState("");
@@ -24,7 +26,7 @@ function ChangePassword() {
     };
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/v1/auth/changePassword",
+        parentUrl + "api/v1/auth/changePassword",
         data,
         { headers: headers }
       );

@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { selectedBook } from "../redux/actions";
 
 export function SkeletonCard() {
+  const parentUrl = window.globalPrentUrl;
   return (
     <div className="flex flex-col space-y-3 w-[95%] md-[90%] m-auto">
       <Grid container wrap="nowrap" overflow="hidden">
@@ -91,10 +92,11 @@ export function SkeletonCard() {
 }
 
 function BooksSection({ title }) {
+  const parentUrl = window.globalPrentUrl;
   const dispatch = useDispatch();
 
   const { isLoading, data } = useQuery("fetch-books" + title, () => {
-    return axios.get("http://localhost:8080/api/v1/books/category/" + title);
+    return axios.get(parentUrl+"api/v1/books/category/" + title);
   });
 
   if (isLoading) {

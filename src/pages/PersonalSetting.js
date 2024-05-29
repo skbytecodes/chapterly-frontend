@@ -10,6 +10,8 @@ import { login } from "../redux/actions";
 import { isTokenExpired } from "../utils/Utils";
 
 function PersonalSetting() {
+  const parentUrl = window.globalPrentUrl;
+
   const accessToken = useSelector((state) => state.authentication.acessToken);
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
@@ -25,7 +27,7 @@ function PersonalSetting() {
           Authorization: "Bearer " + accessToken,
         };
         const data = await axios.get(
-          "http://localhost:8080/api/v1/user/personalDetails",
+          parentUrl + "api/v1/user/personalDetails",
           {
             headers: headers,
           }
@@ -69,7 +71,7 @@ function PersonalSetting() {
     };
     try {
       const response = await axios.put(
-        "http://localhost:8080/api/v1/user/updatePersonalSetting/" + email,
+        parentUrl + "api/v1/user/updatePersonalSetting/" + email,
         data,
         { headers: headers }
       );

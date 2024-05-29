@@ -8,6 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { isTokenExpired } from "../utils/Utils";
 
 function Registration() {
+  const parentUrl = window.globalPrentUrl;
   const dispatch = useDispatch();
 
   const [email, setEmail] = useState("");
@@ -234,7 +235,7 @@ function Registration() {
         formaData.append("data", JSON.stringify(data));
 
         const response = await axios.post(
-          "http://localhost:8080/api/v1/register",
+          parentUrl + "api/v1/register",
           formaData,
           {
             headers: {

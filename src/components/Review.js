@@ -8,9 +8,10 @@ function Review({bookTitle}) {
   const [reviewsData, setReviewsData] = useState([]);
 
   useEffect(() => {
+    const parentUrl = window.globalPrentUrl;
     async function getAllReviewsForBook() {
       const response = await axios.get(
-        "http://localhost:8080/api/v1/reviews/book/" + bookTitle
+        parentUrl + "api/v1/reviews/book/" + bookTitle
       );
 
       setReviewsData(response.data);

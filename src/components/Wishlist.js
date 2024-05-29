@@ -262,13 +262,13 @@ function Wishlist() {
             <div className="order_total_div flex justify-between">
               <p>Shipping (in India)</p>
               <p>
-                <b>&#8377; {100}</b>
+                <b>FREE</b>
               </p>
             </div>
             <div className="order_total_div flex justify-between">
               <p>Amount Payable</p>
               <p>
-                <b>&#8377; {parseFloat(wishlistTotalAmount.toFixed(2)) + 100}</b>
+                <b>&#8377; {parseFloat(wishlistTotalAmount.toFixed(2))}</b>
               </p>
             </div>
           </div>

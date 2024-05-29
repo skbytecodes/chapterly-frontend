@@ -8,6 +8,8 @@ import { login } from "../redux/actions";
 import { isTokenExpired } from "../utils/Utils";
 
 function AddressPage() {
+  const parentUrl = window.globalPrentUrl;
+
   const accessToken = useSelector((state) => state.authentication.acessToken);
   const isLoggedIn = useSelector((state) => state.authentication.isLoggedIn);
   const dispatch = useDispatch();
@@ -19,12 +21,13 @@ function AddressPage() {
   const [pincode, setPincode] = useState("");
 
   useEffect(() => {
+    const parentUrl = window.globalPrentUrl;
     async function setPersonalAddress() {
       const headers = {
         Authorization: "Bearer " + accessToken,
       };
       const data = await axios.get(
-        "http://localhost:8080/api/v1/address/personalAddress",
+        parentUrl + "api/v1/address/personalAddress",
         {
           headers: headers,
         }
@@ -68,7 +71,7 @@ function AddressPage() {
     };
     try {
       const response = await axios.put(
-        "http://localhost:8080/api/v1/address/updatePersonalAddress",
+        parentUrl + "api/v1/address/updatePersonalAddress",
         data,
         { headers: headers }
       );

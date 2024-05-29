@@ -21,6 +21,7 @@ import Footer1 from "./Footer1";
 import Overlay from "./Overlay";
 
 function BookDetails() {
+  const parentUrl = window.globalPrentUrl;
   const { id } = useParams();
   let wishlistItems = useSelector((state) => state.wishlist.items);
   let cartItems = useSelector((state) => state.cartItems.items);
@@ -41,7 +42,7 @@ function BookDetails() {
     isError: isErrorBook,
     error: errorBook,
   } = useQuery("fetch-bookByName-" + id, () => {
-    return axios.get("http://localhost:8080/api/v1/bookByName/" + id);
+    return axios.get(parentUrl+"api/v1/bookByName/" + id);
   });
 
   const {
@@ -50,7 +51,7 @@ function BookDetails() {
     isError: isErrorRating,
     error: isError,
   } = useQuery("fetch-bookRating-" + id, () => {
-    return axios.get("http://localhost:8080/api/v1/book/rating/" + id);
+    return axios.get(parentUrl+"api/v1/book/rating/" + id);
   });
 
   useEffect(() => {

@@ -7,9 +7,10 @@ import Banner from "../images/banner2.jpg";
 import Chapterly_banner from "../images/background_app.jpg";
 
 function BannerSection() {
+  const parentUrl = window.globalPrentUrl;
   const [bannerState, setBannerState] = useState(0);
   const { isLoading, data } = useQuery("fetch-banner", () => {
-    return axios.get("http://localhost:8080/api/v1/banners");
+    return axios.get(parentUrl+"api/v1/banners");
   });
 
   const rightBtnRef = useRef(null);

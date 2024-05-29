@@ -11,9 +11,10 @@ function Category() {
   const [isLoading, setIsLoading] = useState(true);
   const [books, setBooks] = useState([]);
   useEffect(() => {
+    const parentUrl = window.globalPrentUrl;
     async function getBooksByCategory() {
       const response = await axios.get(
-        "http://localhost:8080/api/v1/books/category/" + cat
+        parentUrl + "api/v1/books/category/" + cat
       );
       if (response.data != null) {
         setIsLoading(false);
