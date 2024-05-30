@@ -88,7 +88,7 @@ function Header() {
 
           style={{borderTop:"1px solid gray", borderBottom:"1px solid gray", borderLeft:"1px solid gray"}}
         />
-        <Link to={`/search/${searchingItem}`} onClick={handleSearch}  className="search_div  w-10 flex justify-center items-center px-6 bg-app-red text-white">
+        <Link to={`/search/${searchingItem}`} onClick={handleSearch}  className="search_div  w-10 flex justify-center items-center px-6 bg-green-500 text-white">
           <div>
             <SearchOutlinedIcon />
           </div>
