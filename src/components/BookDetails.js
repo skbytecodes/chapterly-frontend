@@ -119,7 +119,7 @@ function BookDetails() {
       {isLoadingBook ? <Overlay /> : ""}
       <Header />
       <div className="book_container ">
-        <div className="book_nav text-sm h-8  mt-1 text-app-red w-[85%] m-auto">
+        <div className="book_nav text-sm min-h-8 mt-1 text-app-red w-[85%] m-auto">
           <span>Home</span>
           <span>&gt;</span>
           <span>Books</span>
