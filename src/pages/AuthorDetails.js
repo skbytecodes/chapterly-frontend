@@ -54,7 +54,7 @@ function AuthorDetails() {
           <p className="mt-3 italic">{data?.data.biography}</p>
         </div>
         <div className=" h-10 w-[90%] m-auto flex items-center">
-          <span>Wesbite : </span>
+          {/* <span>Wesbite : </span> */}
           <a
             className="ml-4 text-app-red"
             target="_blank"
