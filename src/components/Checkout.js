@@ -5,7 +5,7 @@ import American from "../images/american-express.png";
 import DinersClub from "../images/diners-club.png";
 import Discover from "../images/discover.png";
 import JCB from "../images/jcb.png";
-import Logo from "../images/logo.png";
+import Logo from "../images/chaptlogo.png";
 import Mastercard from "../images/mastercard.png";
 import VisaCard from "../images/visacard.png";
 import { login } from "../redux/actions";

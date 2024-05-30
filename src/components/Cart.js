@@ -182,7 +182,7 @@ function Cart() {
                         &#8377; {item.book.price.toFixed(2)}
                       </span>{" "}
                       <span id="dashed_price" style={{ paddingLeft: "0.5em" }}>
-                        <s>&#8377; {item.book.price.toFixed(2)}</s>
+                        <s>&#8377; {(item.book.price + (item.book.price * (10/100))).toFixed(2)}</s>
                       </span>
                     </div>
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../images/booklogo.png";
+import Logo from "../images/chaptlogo.png";
 
 function NoNavHeader() {
   return (

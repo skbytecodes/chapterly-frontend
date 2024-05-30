@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Logo from "../images/booklogo.png";
+import Logo from "../images/chaptlogo.png";
 import FaceboookLogo from "../images/facebook.png";
 import GoogleLogo from "../images/google-logo.png";
 import { login } from "../redux/actions";

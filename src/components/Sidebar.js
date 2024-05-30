@@ -2,21 +2,15 @@ import { RemoveOutlined } from "@mui/icons-material";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 import ArrowForwardIosOutlinedIcon from "@mui/icons-material/ArrowForwardIosOutlined";
-import CardGiftcardOutlinedIcon from "@mui/icons-material/CardGiftcardOutlined";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
-import LocalOfferOutlinedIcon from "@mui/icons-material/LocalOfferOutlined";
-import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
-import LoyaltyOutlinedIcon from "@mui/icons-material/LoyaltyOutlined";
-import PodcastsOutlinedIcon from "@mui/icons-material/PodcastsOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
 import React, { useRef } from "react";
 import { useDispatch } from "react-redux";
-import Logo from "../images/logo.png";
+import { Link } from "react-router-dom";
+import Logo from "../images/chaptlogo.png";
 import { closeSideBar } from "../redux/actions";
 import "../styles/Sidebar.css";
-import { Link } from "react-router-dom";
 
 function Sidebar() {
   const addIcon = useRef(null);
@@ -49,7 +43,7 @@ function Sidebar() {
           <CloseOutlinedIcon />
         </div>
         <div>
-          <img src={Logo} id="log_img" />
+          <img src={Logo} id="log_img" className="size-10" />
         </div>
         <div>
           <SearchOutlinedIcon />

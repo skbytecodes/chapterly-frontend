@@ -9,7 +9,7 @@ import axios from "axios";
 import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import Logo from "../images/booklogo.png";
+import Logo from "../images/chaptlogo.png";
 import { openSideBar } from "../redux/actions";
 import DropDownMenu from "./DropDownMenu";
 
@@ -42,17 +42,17 @@ function Header() {
   // };
 
   return (
-    <div className="header md:bg-[#272e4f] md:h-[10vh] lg:h-[12vh] xl:h-[15vh] md:flex md:justify-around items-center md:text-white shadow-md">
+    <div className="header bg-[#2A3132]  md:h-[10vh] lg:h-[12vh] xl:h-[15vh] md:flex md:justify-around items-center md:text-white shadow-md">
 
       <div className="nav_bar flex h-14 md:h-auto">
         
         <div className="ham_loc flex-1 flex justify-around items-center md:hidden" >
           <div className="menuBtn" onClick={openSidebar}>
-            <MenuIcon style={{color:"gray"}}/>
+            <MenuIcon style={{color:"white"}}/>
           </div>
           <Link to="/wishlist">
             <div className="wishlistBtn">
-              <FavoriteBorderOutlinedIcon style={{color:"gray"}}/>
+              <FavoriteBorderOutlinedIcon style={{color:"white"}}/>
             </div>
           </Link>
         </div>
@@ -65,18 +65,18 @@ function Header() {
 
         <div className="fav_cart flex-1  flex justify-around items-center md:hidden">
           <div className="notificationBtn">
-            <NotificationsNoneIcon style={{color:"gray"}}/>
+            <NotificationsNoneIcon style={{color:"white"}}/>
           </div>
           <Link to="/cart">
             <div className="cartBtn">
-              <ShoppingCartOutlinedIcon style={{color:"gray"}}/>
+              <ShoppingCartOutlinedIcon style={{color:"white"}}/>
             </div>
           </Link>
         </div>
 
       </div>
 
-      <div className="search_container flex justify-between h-9  md:w-[45%]">
+      <div className="search_container flex justify-between h-9 text-white md:w-[45%]">
         <input
           ref={searchInputBtn}
           className="text_input flex-1 pl-4 outline-none text-sm bg-transparent"

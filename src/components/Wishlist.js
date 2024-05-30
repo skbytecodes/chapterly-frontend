@@ -25,10 +25,13 @@ function Wishlist() {
   const totalCartValue = useSelector((state) => state.totalItemsAmount);
   const addToCartBtnWish = useRef(null);
   const addedToCartBtnWish = useRef(null);
+  const [wishlistTotalCount, setWishlistTotalCount] = useState(0);
+
   useEffect(() => {
     setItems(wishlistItems);
+    updateWishlistAmountAndCount(wishlistItems);
     scrollToTop();
-  }, []);
+  }, [wishlistItems]);
 
   const pushItemToWishlist = async (item) => {
     dispatch(addToWishlist({ book: item, count: 1 }));
@@ -107,6 +110,15 @@ function Wishlist() {
       top: 0,
       behavior: "smooth",
     });
+  };
+
+  const updateWishlistAmountAndCount = (items) => {
+    let itemsCount = 0;
+    items.map((item) => {
+      itemsCount = itemsCount + item.count;
+    });
+
+    setWishlistTotalCount(itemsCount);
   };
 
   return (
@@ -198,7 +210,7 @@ function Wishlist() {
                         &#8377; {item.book.price.toFixed(2)}
                       </span>{" "}
                       <span id="dashed_price" style={{ paddingLeft: "0.5em" }}>
-                        <s>&#8377; {item.book.price.toFixed(2)}</s>
+                        <s>&#8377; {}</s>
                       </span>
                     </div>
 
@@ -250,7 +262,7 @@ function Wishlist() {
             <div className="order_total_div flex justify-between">
               <p>Total Items</p>
               <p>
-                <b>&#8377; {6}</b>
+                <b>&#8377; {wishlistTotalCount}</b>
               </p>
             </div>
             <div className="order_total_div flex justify-between">

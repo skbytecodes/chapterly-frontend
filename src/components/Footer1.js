@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logo from "../images/booklogo.png";
+import Logo from "../images/chaptlogo.png";
 
 const Footer1 = () => {
   return (
-    <div className="mx-auto py-16 xl:px-20 lg:px-12 sm:px-6 px-4 bg-[#272e4f]">
+    <div className="mx-auto py-16 xl:px-20 lg:px-12 sm:px-6 px-4 bg-[#2A3132]">
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 gap-4">
         <div className="flex flex-col flex-shrink-0">
           <div>

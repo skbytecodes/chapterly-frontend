@@ -1,9 +1,6 @@
 import axios from "axios";
 import React, { useRef, useState } from "react";
 import { useQuery } from "react-query";
-import PhoneBanner from "../images/28804_Quote_B2_Wandering-Stars_02_27_24-mobile.jpg";
-import Banner from "../images/banner2.jpg";
-// import Chapterly_banner from "../images/chapter_banner.jpg";
 import Chapterly_banner from "../images/background_app.jpg";
 
 function BannerSection() {
