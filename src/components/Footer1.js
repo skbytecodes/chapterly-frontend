@@ -11,7 +11,7 @@ const Footer1 = () => {
             <img src={Logo} className="size-10" />
           </div>
           <p className="text-sm leading-none text-white mt-4">
-            Copyright © 2021 Chapterly
+            Copyright © 2024 Chapterly
           </p>
           <p className="text-sm leading-none text-white mt-4">
             All rights reserved
