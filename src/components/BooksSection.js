@@ -177,7 +177,7 @@ function BooksSection({ title }) {
                       )}
                     </div>
                     <div className=" h-7 flex justify-center items-end">
-                      <p className="price md:font-semibold">
+                      <p className="price font-semibold">
                         &#8377; {book.price}
                       </p>
                     </div>

@@ -20,7 +20,8 @@ function HomeContainer() {
   if(isError){
     window.location.href = "/error";
   }
-  const reversedCategories = data?.data?.reverse();
+  // const reversedCategories = data?.data?.reverse();
+  const reversedCategories = data?.data;
 
   return (
     <>

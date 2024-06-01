@@ -25,8 +25,8 @@ import AboutMe from "./pages/AboutMe";
 import Registration from "./components/Registration";
 
 function App() {
-  // window.globalPrentUrl = "http://localhost:8080/";
-  window.globalPrentUrl = "https://chapterly-production.up.railway.app/"
+  window.globalPrentUrl = "http://localhost:8080/";
+  // window.globalPrentUrl = "https://chapterly-production.up.railway.app/"
   const sidebarOpen = useSelector((state) => state.sidebar);
   return (
     <Router>
