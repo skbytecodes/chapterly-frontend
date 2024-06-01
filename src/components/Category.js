@@ -20,7 +20,7 @@ function Category() {
         setIsLoading(false);
       }
       setBooks(response.data);
-      console.log(cat, response.data);
+      
     }
     getBooksByCategory();
       scrollToTop();

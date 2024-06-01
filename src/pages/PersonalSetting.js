@@ -76,7 +76,7 @@ function PersonalSetting() {
         { headers: headers }
       );
     } catch (error) {
-      console.log("error");
+      
     }
   };
 

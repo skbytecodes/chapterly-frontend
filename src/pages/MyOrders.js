@@ -14,7 +14,7 @@ function MyOrders() {
   const accessToken = useSelector((state) => state.authentication.acessToken);
   const [orders, setOrders] = useState([]);
   useEffect(() => {
-    console.log("new accessToken is ", accessToken);
+    
     const headers = {
       Authorization: "Bearer " + accessToken,
     };
@@ -26,7 +26,7 @@ function MyOrders() {
             headers: headers,
           }
         );
-        console.log("order resposne : ", response)
+        
         setOrders(response.data);
       } catch (error) {
         const auth = {

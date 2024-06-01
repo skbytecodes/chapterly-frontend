@@ -58,12 +58,12 @@ function Registration() {
     if (!isEmailCorrect) {
       registerEmailRef.current.style.color = "red";
       setEmail(email);
-      console.log("email : false");
+      
       return false;
     } else {
       registerEmailRef.current.style.color = "black";
       setEmail(email);
-      console.log("email : true");
+      
       return true;
     }
   };
@@ -76,12 +76,12 @@ function Registration() {
       loginPasswordText.current.style.display = "block";
       loginPasswordText.current.style.color = "red";
       setPassword(password);
-      console.log("password : false");
+      
       return false;
     } else {
       loginPasswordText.current.style.display = "none";
       setPassword(password);
-      console.log("password : true");
+      
       return true;
     }
   };
@@ -90,11 +90,11 @@ function Registration() {
     if (firstname != null && firstname.length >= 3) {
       firstnameRef.current.style.color = "black";
       setFirstname(firstname);
-      console.log("firstname : true");
+      
       return true;
     } else {
       firstnameRef.current.style.color = "red";
-      console.log("firstname : false");
+     
       setFirstname(firstname);
       return false;
     }
@@ -104,11 +104,11 @@ function Registration() {
     if (lastname != null && lastname.length >= 3) {
       lastnameRef.current.style.color = "black";
       setLastname(lastname);
-      console.log("lastname : true");
+     
       return true;
     } else {
       lastnameRef.current.style.color = "red";
-      console.log("lastname : false");
+      
       setLastname(lastname);
       return false;
     }
@@ -119,10 +119,10 @@ function Registration() {
     const isPhoneNumberCorrect = regex.test(phoneNumber);
     if (!isPhoneNumberCorrect) {
       setPhone(phoneNumber);
-      console.log("phoneNumber : false");
+      
       return false;
     } else {
-      console.log("phoneNumber : true");
+      
       setPhone(phoneNumber);
       return true;
     }
@@ -136,10 +136,10 @@ function Registration() {
       pincodeRegex.test(pincode)
     ) {
       setPincode(pincode);
-      console.log("pincode : true");
+      
       return true;
     } else {
-      console.log("phoneNumber : false");
+      
       setPincode(pincode);
       return false;
     }
@@ -158,10 +158,10 @@ function Registration() {
   const validateHouse = (text) => {
     if (text !== null && text !== undefined && text.trim().length >= 3) {
       setHouse(text);
-      console.log("house : true");
+      
       return true;
     } else {
-      console.log("house : false");
+      
       setHouse(text);
       return false;
     }
@@ -170,10 +170,10 @@ function Registration() {
   const validateState = (text) => {
     if (text !== null && text !== undefined && text.trim().length >= 3) {
       setState(text);
-      console.log("state : true");
+      
       return true;
     } else {
-      console.log("state : false");
+      
       setState(text);
       return false;
     }
@@ -182,10 +182,10 @@ function Registration() {
   const validateCity = (text) => {
     if (text !== null && text !== undefined && text.trim().length >= 3) {
       setCity(text);
-      console.log("city : true");
+      
       return true;
     } else {
-      console.log("city : false");
+     
       setCity(text);
       return false;
     }
@@ -194,10 +194,10 @@ function Registration() {
   const validateCountry = (text) => {
     if (text !== null && text !== undefined && text.trim().length >= 3) {
       setCountry(text);
-      console.log("country : true");
+     
       return true;
     } else {
-      console.log("country : false");
+      
       setCountry(text);
       return false;
     }
@@ -243,7 +243,7 @@ function Registration() {
             },
           }
         );
-        console.log("access token ", response);
+        
         dispatch(
           login({ acessToken: response.access_token, isLoggedIn: true })
         );

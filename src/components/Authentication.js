@@ -87,7 +87,7 @@ function Authentication() {
           acessToken: response.data.access_token,
           isLoggedIn: true,
         };
-        console.log("Auth ", auth);
+      
         dispatch(login(auth));
       } catch (error) {
         invalidCredentialsRef.current.style.display = "block";
@@ -167,7 +167,7 @@ function Authentication() {
             password: password,
           }
         );
-        console.log("access token ", response);
+        
         dispatch(
           login({ acessToken: response.access_token, isLoggedIn: true })
         );

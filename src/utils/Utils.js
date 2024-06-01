@@ -7,12 +7,7 @@ export const isTokenExpired = (token) => {
     const decodedToken = jwtDecode(token);
     const expirationTime = decodedToken.exp * 1000; // Convert expiration time to milliseconds
     const currentTime = Date.now();
-    console.log(
-      " expirationTime ",
-      expirationTime,
-      "current time ",
-      currentTime
-    );
+
     return expirationTime < currentTime;
   } catch (error) {
     // Token decoding failed

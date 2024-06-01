@@ -93,7 +93,7 @@ function LoginPage() {
           acessToken: response.data.access_token,
           isLoggedIn: true,
         };
-        console.log("Auth ", auth);
+        
         dispatch(login(auth));
       } catch (error) {
         setIsLoading(false);

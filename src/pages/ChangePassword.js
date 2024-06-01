@@ -30,9 +30,9 @@ function ChangePassword() {
         data,
         { headers: headers }
       );
-      console.log("changepassword ", response);
+      
     } catch (error) {
-      console.log("error", error);
+      
     }
   };
 

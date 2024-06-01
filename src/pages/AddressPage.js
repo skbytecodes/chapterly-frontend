@@ -33,7 +33,7 @@ function AddressPage() {
         }
       );
 
-      console.log("myyyy dataaaaaaaa ", data);
+      
 
       setHouse(data?.data.houseNo);
       setStreet(data?.data.street);
@@ -76,7 +76,7 @@ function AddressPage() {
         { headers: headers }
       );
     } catch (error) {
-      console.log("error", error);
+      
     }
   };
 

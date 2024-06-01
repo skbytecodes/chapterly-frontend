@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/ProductDetails.css";
 
 function ProductDetails({book}) {
-  console.log("book is ", book)
+  
   return (
     <div className="productDetails">
       <h3 style={{color:"#d51912"}}>Product Details</h3>
